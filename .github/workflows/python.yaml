@@ -19,5 +19,5 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: path/to/artifact/test.txt
+            name: my-artifact ${{ matrix.node-version }}
+            path: ${{ github.workspace }}
